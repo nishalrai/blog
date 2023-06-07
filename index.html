@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<meta name="author" content="Nishal Rai Portfolio">
+	<meta name="keywords" content="Portfolio, Nishal Rai">
+	<meta name="description" content="CV, blog, Research">
+	<meta http-equiv="refresh" content="100">
+	<title>Homepage</title>
+</head>
+<body>
+	<!-- This is the section for the navbar in the index webpage -->
+	<header>
+	  <nav>
+	    <ul>
+	      <li><a href="#">Home</a></li>
+	      <li><a href="pages/profile.html">Profile</a></li>
+	      <li><a href="pages/gallery.html">Portfolio</a></li>
+	      <li><a href="pages/blog.html">Blog</a></li>
+	      <li><a href="pages/form.html">Contact</a></li>
+	      <li><a href="pages/research.html">Research</a></li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<!-- This section holds the image slider in the webpage with controls and buttons functioing with JavaScript -->
+	<div class="content">
+		<div class="galleryContainer">
+		    <div class="slideShowContainer">
+		        <div id="playPause" onclick="playPauseSlides()"></div>
+		        <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+		        <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+		        <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+		        <div class="imageHolder">
+		            <img src="images/slide.jpg">
+		            <p class="captionText">Bhanu Chowk, Dharan</p>
+		        </div>
+		        <div class="imageHolder">
+		            <img src="images/slide1.jpg">
+		            <p class="captionText">Celebration of Color</p>
+		        </div>
+		        <div class="imageHolder">
+		            <img src="images/slide2.jpg">
+		            <p class="captionText">Last day of College</p>  <!-- This caption is generated with the respective images in the image slider -->
+		        </div>
+		        <div class="imageHolder">
+		            <img src="images/slide4.jpg">
+		            <p class="captionText">Kanyam, Ilam</p>
+		        </div>
+		        <div class="imageHolder">
+		            <img src="images/slide6.jpg">
+		            <p class="captionText">Little Sister</p>
+		        </div>
+		    </div>
+		    <div id="dotsContainer"></div>
+		</div>
+    </div>
+
+    <!-- This section holds the social media sites icon in the webpage -->
+    <div class="icons">
+    	<ul>
+    		<a href="https://www.facebook.com/"><li class="facebook"><i class="fab fa-facebook-square"></i></li></a>
+			<a href="https://twitter.com/"><li class="twitter"><i class="fab fa-twitter"></i></li></a>
+			<a href="https://www.instagram.com/"><li class="instagram"><i class="fab fa-instagram"></i></li></a>
+			<a href="https://www.google.com/"><li class="google"><i class="fab fa-google"></i></li></a>
+			<a href="https://www.youtube.com/"><li class="youtube"><i class="fab fa-youtube"></i></li></a>
+    	</ul>
+    </div>
+    <div class="footer">
+    	<p class="p1">
+    		@2019 created by: Nishal Rai<br><br>
+    		For more information, contact via email- nishal.rai99@gmail.com
+    	</p>
+    </div>
+    <script src="javascript/index.js"></script>
+</body>
+</html>

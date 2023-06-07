@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<link rel="stylesheet" type="text/css" href="../css/form.css">
+</head>
+<body>
+	<!-- This is the section for the navbar in the index webpage -->
+	<header>
+	  <nav>
+	    <ul>
+	      <li><a href="../index.html">Home</a></li>
+	      <li><a href="profile.html">Profile</a></li>
+	      <li><a href="gallery.html">Portfolio</a></li>
+	      <li><a href="blog.html">Blog</a></li>
+	      <li><a href="#">Contact</a></li>
+	      <li><a href="research.html">Research</a></li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<!-- This holds the contact form along with social media sites icon in the parition of the whole box -->
+	<div class="content">
+			<div id="login-box">
+			        <div class="left-box">
+				         <h1> Sign Up</h1>
+				         <form name="messageForm" action="#" onsubmit="results()">  <!-- When the sign up button is pressed then results() function is called to execute -->
+				         	<input type="text" name="username" placeholder="Username">
+					        <input type="text" name="email" placeholder="Email">
+					        <input type="password" name="password" placeholder="Password">
+					        
+					        <input type="password" name="password2" placeholder="Retype password">
+					        
+					        <input type="submit" name="signup-button" value="Sign Up">
+					     </form>
+					         
+			        </div>
+		            <div class="right-box" style="background-color: #9FA0A1">
+		             <span class="signinwith">Sign in with<br/>Social Network </span>
+		        
+	 <!-- This are the buttons that directs to the respective social media sites when it is clicked -->
+		             <button class="social facebook" formaction="https://www.facebook.com/">Log in with Facebook</button>    
+		             <button class="social twitter" formaction="https://twitter.com/">Log in with Twitter</button> 
+		             <button class="social google" formaction="https://www.google.com/">Log in with Google+</button>   
+		        
+		            </div>
+		            <div class="or">OR</div>
+		           
+		    </div>
+	</div>
+   <!-- This is an iternal javaScript used in this webpage -->
+	<script type="text/javascript">
+		function results()
+		{
+			var name=document.forms["messageForm"]["username"].value;
+			var email=document.forms["messageForm"]["email"].value;
+			var pass=document.forms["messageForm"]["password"].value;
+			var pass1=document.forms["messageForm"]["password2"].value;
+
+			if(name== "" || email== "" || pass== "" || pass1== ""){    // when the text field is empty and the sign up button is pressed
+				alert("Please fill out all the text field");
+				return false;
+			}
+			else{          //when all the text field is filled and the sign up button is pressed
+				
+				alert("Thank you for the Subscription");   
+				display();
+				return true;
+				
+			}
+
+
+	    }
+         
+        // this function displays the values assigned in the respective text field in a new window
+	    function display()
+	    {
+			    DisplayWindow1 = window.open('','NewWin','width=600,height=400')
+			    message = "<b>Name: </b>" + document.messageForm.username.value;
+			    message += "<br> <b>E-mail address: </b>" + document.messageForm.email.value;
+			    message += "<br> <b>Password: </b>" + document.messageForm.password.value;
+			    message += "<br> <b>Retype Password: </b>" + document.messageForm.password2.value;
+			    DisplayWindow1.document.write(message);
+	    }
+		
+	</script>
+</body>
+</html>

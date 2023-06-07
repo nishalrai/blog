@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+:root {
+  --background: rgba(0, 214, 170, .85);  /* Acts as a variable with a specified color in it */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+
+.content {
+  height: 100vh;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+/* navigation styles start here */
+
+#h1 {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 80px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 1;
+  position: relative;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+#h1 {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  nav {
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1); 
+    background: none;
+    top: initial;
+    left: initial;
+    
+    grid-column: 3 / 4; /* takes the scale of place as mentioned in the nav bar */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 140ms;
+    transform-origin: left;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+
+
+a{
+  transition: all .5s;
+  text-decoration: none;
+  color: #fff;
+
+}
+img{
+  width: 100%;
+  transition: all .5s;
+}
+.container{
+   box-shadow: 0 4px 9px rgba(0, 0, 0, 0.8);
+   width: 100%;
+   position: absolute;
+   overflow: hidden;
+   max-width: 1200px;
+   margin-left: 135px;
+   margin-bottom: 40px;
+   margin-top: 140px;
+   
+   
+}
+.mainContent{
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(#979A9E);
+}
+p{
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.contents{
+  margin:40px 15px 4px 15px;
+}
+.content .contents .topic{
+  font-weight: 600;
+}
+.content .contents img{
+  height: 100%;
+  max-height: 800px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 1rem;
+}
+.content .contents video{
+  height: 100%;
+  max-height: 800px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 1rem;
+}
+.content .contents .realContent{
+  padding-bottom: 2rem;
+} 
+.footer{
+  position: absolute;
+  width: 100%;
+  margin-top: 1040vh;
+  background: #5A5265;
+  box-shadow: 0px 0px 3px 1px #00000078;
+  padding: 4px;
+  height: 120px;
+  padding-top: 15px;
+}
+.footer .footerContent p{
+  text-align: center;
+}
+#topBtn {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(212, 106, 106); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  text-transform: uppercase;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#topBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/gallery.css">
+	<title>Gallery</title>
+</head>
+<body>
+  <!-- This is the section for the navbar in the index webpage -->
+	<header id="navbar">
+	  <nav>
+	    <ul>
+	      <li><a href="../index.html">Home</a></li>
+	      <li><a href="profile.html">Profile</a></li>
+	      <li><a href="#">Portfolio</a></li>
+	      <li><a href="blog.html">Blog</a></li>
+	      <li><a href="form.html">Contact</a></li>
+	      <li><a href="research.html">Research</a></li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<div class="section">
+      <div class="gallery__item">
+        <img src="../images/gallery.jpg" alt="" class="gallery__image">
+        <div class="gallery__desc">
+          <h3 class="gallery__title">Hello</h3>
+        </div>
+  </div>
+  <div class="gallery__item" id="portfolio">
+      <img src="../images/gallery1.jpg" alt="" class="gallery__image">
+      <div class="gallery__desc">
+        <h3 class="gallery__title">Get some time</h3>
+      </div>
+  </div>
+  <div class="gallery__item" id="portfolio">
+    <img src="../images/gallery2.jpg" alt="" class="gallery__image">
+    <div class="gallery__desc">
+      <h3 class="gallery__title"></h3>
+    </div>
+  </div>
+  <div class="gallery__item" id="portfolio">
+    <img src="../images/gallery3.jpg" alt="" class="gallery__image">
+    <div class="gallery__desc">
+      <h3 class="gallery__title">Happy Day</h3>
+    </div>
+  </div>
+
+  <!-- this is the part having button -->
+  <div class="gallery__item" id="portfolio">
+    <img src="../images/gallery4.2.jpg" alt="" class="gallery__image">
+    <div class="gallery__desc">
+      <h3 class="gallery__title">Holi Celebaration</h3>
+        <a href="#gallery-item-1" class="button">More info</a>
+    </div>
+  </div>
+  <div class="gallery__item" id="portfolio">
+    <img src="../images/gallery5.jpg" alt="" class="gallery__image">
+    <div class="gallery__desc">
+      <h3 class="gallery__title">Last Day of College</h3>
+      <a href="#gallery-item-2" class="button">More info</a>
+    </div>
+  </div>
+  <div class="gallery__item" id="portfolio">
+    <img src="../images/gallery6.jpg" alt="" class="gallery__image">
+    <div class="gallery__desc">
+      <h3 class="gallery__title">Bhanu Chowk, Dharan</h3>
+      <a href="#gallery-item-3" class="button">More info</a>
+    </div>
+  </div>
+  <div class="gallery__item">
+    <img src="../images/gallery7.jpg" alt="" class="gallery__image">
+    <div class="gallery__desc">
+      <h3 class="gallery__title">Angry Mood</h3>
+      <a href="#gallery-item-4" class="button">More info</a>
+    </div>
+  </div>
+</div>
+
+  <!-- This begins the lightbox of the gallery -->
+<div class="gallery-lightbox" id="gallery-item-1">
+  <div class="gallery-lightbox__content">
+  <a href="#portfolio" class="close"></a> 
+  <img class="gallery-lightbox__image" src="../images/gallery4.jpg" alt="">
+  <h3 class="gallery__title">Holi Celebaration</h3>
+  <p class="portfolio__body">Let the color of celebaration spreads the joy and Happienes.</p>
+  </div>
+</div> 
+
+	<div class="gallery-lightbox" id="gallery-item-2">
+	  <div class="gallery-lightbox__content">
+	    <a href="#portfolio" class="close"></a>
+	    <img class="gallery-lightbox__image" src="../images/gallery5.jpg" alt="" style="max-height:400px;">
+	    <h3 class="gallery__title">Last day of college</h3>
+	    <p class="portfolio__body">Never thought such beautiful moments before we would separate.</p>
+	  </div>
+	</div> 
+
+	<div class="gallery-lightbox" id="gallery-item-3">
+	  <div class="gallery-lightbox__content">
+	    <a href="#portfolio" class="close"></a>
+	    <img class="gallery-lightbox__image" src="../images/gallery6.jpg" alt="">
+	    <h3 class="gallery__title">Bhanu Chowk, Dharan</h3>
+	    <p class="portfolio__body">A beautiful place to live in.</p>
+	  </div>
+    </div>
+    <div class="gallery-lightbox" id="gallery-item-4">
+      <div class="gallery-lightbox__content">
+	   <a href="#portfolio" class="close"></a>
+	  <img class="gallery-lightbox__image" src="../images/gallery7.jpg" alt="">
+	  <h3 class="gallery__title">Angry mood</h3>
+      <p class="portfolio__body">Just leave me, alone.</p>
+   </div>
+</div> 
+
+
+<!-- This is an iternal javaScript used in this webpage -->
+<script type="text/javascript">  //this function is executed when the mouse is scrolled down
+
+      var prevScroll = window.pageYOffset;  // .pageYOffset returns the number of pixel scrolled down to the var prevScroll
+      window.onscroll = function() {
+
+      var currentScroll = window.pageYOffset;   // the current number pixel when the button is ideal is returned to the var currentScroll
+      if(prevScroll > currentScroll) {
+            document.getElementById("navbar").style.top = "0";     
+      } else {
+            document.getElementById("navbar").style.top = "-100px";
+      }
+
+      prevScroll = currentScroll;
+
+      }
+ </script>
+
+</body>
+</html>
